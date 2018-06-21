@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+
+\usepackage{forest}
+\forestset{
+  gappy tree/.style={
+    for tree={
+      circle,
+      draw,
+      s sep'+=5pt, 
+      fit=band,
+      edge=->
+    },
+  },
+  phantom/.style={draw=none, no edge},
+  top/.style={draw, no edge}
+}
+
+
+\begin{document}
+\begin{forest}
+[2, gappy tree  
+	[5 	
+		[10 [12] [16]]
+		[6 [9] [7]]] 
+	[4 
+		[8 [11] [, phantom]]  
+		[22]]]
+\end{forest}
+\end{document}
